@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 1rem;
+}
+@media screen and (min-width: 58rem) {
+  body .main-container {
+    flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 6rem 1rem;
+  }
+}
+body .main-container .profile {
+  width: 22rem;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 12px;
+  color: hsl(236, 100%, 87%);
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 58rem) {
+  body .main-container .profile {
+    width: 13rem;
+    margin-bottom: 0;
+  }
+}
+body .main-container .profile .profile-info {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
+}
+@media screen and (min-width: 58rem) {
+  body .main-container .profile .profile-info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 5rem;
+  }
+}
+body .main-container .profile .profile-info img {
+  width: 60px;
+  border: 3px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+body .main-container .profile .profile-info h3 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 58rem) {
+  body .main-container .profile .profile-info h3 {
+    font-size: 2rem;
+  }
+}
+body .main-container .profile .time-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+}
+@media screen and (min-width: 58rem) {
+  body .main-container .profile .time-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+body .main-container .profile .time-nav li.active, body .main-container .profile .time-nav li:hover {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+body .main-container .activity-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+@media screen and (min-width: 58rem) {
+  body .main-container .activity-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+body .main-container .activity-container .activity-card {
+  position: relative;
+  background-color: hsl(235, 46%, 20%);
+  width: 22rem;
+  color: hsl(0, 0%, 100%);
+  border-radius: 12px;
+}
+@media screen and (min-width: 58rem) {
+  body .main-container .activity-container .activity-card {
+    width: 13rem;
+    margin-top: 3rem;
+  }
+}
+body .main-container .activity-container .activity-card:hover:not(.no-hover) {
+  background-color: hsl(235, 37%, 45%);
+  cursor: pointer;
+}
+body .main-container .activity-container .activity-card:before {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  width: 22rem;
+  height: 100%;
+  padding-bottom: 3rem;
+  border-radius: 12px;
+  z-index: -1;
+}
+@media screen and (min-width: 58rem) {
+  body .main-container .activity-container .activity-card:before {
+    width: 13rem;
+  }
+}
+body .main-container .activity-container .activity-card.Work:before {
+  background: hsl(15, 100%, 70%);
+  background-image: url("./../images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: top right 12px;
+}
+body .main-container .activity-container .activity-card.Play:before {
+  background: hsl(195, 74%, 62%);
+  background-image: url("./../images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: top right 12px;
+}
+body .main-container .activity-container .activity-card.Study:before {
+  background: hsl(348, 100%, 68%);
+  background-image: url("./../images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position: top right 12px;
+}
+body .main-container .activity-container .activity-card.Exercise:before {
+  background: hsl(145, 58%, 55%);
+  background-image: url("./../images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position: top right 12px;
+}
+body .main-container .activity-container .activity-card.Social:before {
+  background: hsl(264, 64%, 52%);
+  background-image: url("./../images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position: top -10px right 12px;
+}
+body .main-container .activity-container .activity-card.Self-Care:before {
+  background: hsl(43, 84%, 65%);
+  background-image: url("./../images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position: top right 12px;
+}
+body .main-container .activity-container .activity-card .card-head {
+  position: relative;
+  padding: 0rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+body .main-container .activity-container .activity-card .card-head img {
+  width: 15px;
+  position: absolute;
+  right: 1rem;
+  z-index: 3;
+  padding: 10px;
+}
+body .main-container .activity-container .activity-card .card-head img:hover {
+  cursor: pointer;
+}
+body .main-container .activity-container .activity-card .time {
+  padding: 0rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 58rem) {
+  body .main-container .activity-container .activity-card .time {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+body .main-container .activity-container .activity-card .time h3 {
+  font-size: 2rem;
+}
+body .main-container .activity-container .activity-card .time p {
+  color: hsl(236, 100%, 87%);
+  font-size: 0.8rem;
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+body .attribution a {
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
