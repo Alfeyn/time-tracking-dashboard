@@ -61,7 +61,7 @@ const populateDOM = (data, timeframe) => {
 };
 
 // Handle button clicks and fetch data
-fetch('./../data/data.json')
+fetch('https://raw.githubusercontent.com/Alfeyn/time-tracking-dashboard/main/data/data.json')
     .then((response) => {
         if (!response.ok) throw new Error('Oops! Something went wrong.');
         return response.json();
